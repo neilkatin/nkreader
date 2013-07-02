@@ -1,0 +1,17 @@
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'reader/reader.css' %}" />
+
+<h1>Tweets for {{ user_name }}:</h1>
+
+{% if tweet_list %}
+    <div class='tweetlist'>
+    {% for tweet in tweet_list %}
+        {% include 'reader/tweetentry.html' with tweet=tweet %}
+        {# <li>tweet {{ tweet.id }} #}
+    {% endfor %}
+    </div>
+{% else %}
+  <p>no tweets are available</p>
+{% endif %}

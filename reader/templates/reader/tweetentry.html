@@ -1,0 +1,15 @@
+
+<div class='tweetentry'>
+    {% with user=tweet.user %}
+        <div class='tweetuser'>
+            <a href='https://twitter.com/{{ user.screen_name }}'>
+                <img src='{{ user.profile_image_url_https }}' title='@{{ user.screen_name }}' alt='@{{ user.screen_name }}' />
+                {{ user.name }} @{{user.screen_name }}
+            </a>
+        </div>
+        <div 'class='tweetbody'>
+            tweet: {{ tweet.id }} text: {{ tweet.text|safe }}
+        </div>
+        <div class='tweetclose'> </div>
+    {% endwith %}
+</div>

@@ -1,0 +1,24 @@
+
+.tweetentry {
+    /* background-color: #ff0000; */
+    border-width: thin;
+    border-color: #bbbbbb;
+    border-style: solid;
+    margin: 2px 0px;
+}
+.tweetentry * {
+    border-style: none;
+}
+
+.tweetuser img {
+    float: left;
+}
+
+.tweetclose {
+    clear: left;
+}
+
+.tweetlist {
+    width: 400px;
+    height: 100%;
+}
